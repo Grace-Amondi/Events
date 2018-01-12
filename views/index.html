@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+      <title>Serie A Standings | A sample app that demonstrate how to consume football-data RESTful API</title>
+ 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css">
+</head>
+<body style="background: linear-gradient(blue, green)">
+ 
+    <div class="container">
+        <div class="section columns">
+            <div class="column is-8 is-offset-2">
+                <h2 class="title has-text-centered">
+Events Categories                  </h2>
+ 
+                  <table class="table is-bordered is-striped is-narrow">
+                    <thead>
+                        <tr>
+                            <th width="10px">#</th>
+                              <th>Name</th>
+                              <th>Short name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {{#each result.categories}}
+                        <tr>
+                            <td>{{ id }}</td>
+                              <td>
+                                  <a href="categories/{{categoriesID id}}">
+                                      {{ name }}
+                                  </a>
+                              </td>
+                              <td>
+                                  {{ short_name }}
+                              </td>
+                        </tr>
+                      {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+ 
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+    <title>{{ result.name }}</title>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css">
+ 
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(green,blue)">
+ 
+    <div class="container">
+        <div class="section columns">
+            <div class="column is-8 is-offset-2">
+                <h2 class="title has-text-centered">
+                      {{ result.name }}
+                  </h2>
+ 
+                  <div class="box">
+                    <article class="media">
+                        <div class="media-content">
+                              <div class="content">
+                                  <aside class="menu">
+                                      <p class="menu-label">Basic Information</p>
+                            
+                                    <ol start="1"class="menu-list">
+                                    {{#each result.subcategories}}
+                                        <li>
+                                           {{ name }}
+                                        </li>
+                                        {{/each}}
+                                    </ol>
+                                  </aside>
+                              </div>
+                        </div>
+                        <div class="media-right">
+                            <a href="/" class="button">Home</a>
+                        </div>
+                      </article>
+                </div>
+ 
+            </div>
+        </div>
+    </div>
+ 
+</body>
+</html>
